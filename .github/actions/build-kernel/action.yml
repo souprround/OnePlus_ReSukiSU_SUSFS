@@ -1303,7 +1303,7 @@ runs:
           echo "Kernel <= $MIN_VERSION, skipping module intercept and overlay mechanism patch"
         else
           echo "Patching module intercept and overlay mechanism"
-          patch -p1 -F 3 < "$KERNEL_PATCHES_FOLDER/oneplus/module_overlay/0001-module-Add-module-intercept-and-overlay-mechanism.patch"
+          patch -p1 -F 3 < "$KERNEL_PATCHES_FOLDER/oneplus/module_overlay/0001-module-Add-module-intercept-and-overlay-mechanism-${ANDROID_VER}-${KERNEL_VER}.patch"
           overlay_patched=1
           chmod +x ./kernel/module/module_overlay/convert_overlay.sh
         fi
